@@ -29,14 +29,14 @@ namespace OptimizeMePlease
             //var d = benchmarkService.GetAuthors_Optimized_Struct1();
 
             //Comment me after first execution, please.
-            //IWillPopulateData();
+            // IWillPopulateData();
 
             BenchmarkRunner.Run<BenchmarkService>();
         }
 
         public static void IWillPopulateData()
         {
-            string sqlConnectionString = @"Server=localhost;Database=OptimizeMePlease;Trusted_Connection=True;Integrated Security=true;MultipleActiveResultSets=true";
+            string sqlConnectionString = @"Server=localhost;Database=OptimizeMePlease;Trusted_Connection=True;Integrated Security=true;MultipleActiveResultSets=true;TrustServerCertificate=true";
 
             string workingDirectory = Environment.CurrentDirectory;
             string path = Path.Combine(Directory.GetParent(workingDirectory).Parent.Parent.FullName, @"script.sql");
